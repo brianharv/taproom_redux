@@ -16,7 +16,7 @@ function Keg(props) {
             <ListGroup.Item>${props.price} <em>per pint</em></ListGroup.Item>
             <ListGroup.Item>{props.quantity} Serving Remaining</ListGroup.Item>
           </ListGroup>
-          <Card.Link href="#">View Product Details</Card.Link><br></br>
+          <Card.Link href="#" onClick={() => props.whenKegClicked(props.id)}>View Product Details</Card.Link><br></br>
           <Card.Link href="#">Visit Brewery Website</Card.Link>
         </Card.Body>
       </Card>
@@ -30,7 +30,9 @@ Keg.propTypes = {
   price: PropTypes.number,
   alcCon: PropTypes.number,
   flavor: PropTypes.string,
-  quantity: PropTypes.number
+  quantity: PropTypes.number,
+  id: PropTypes.string,
+  whenKegClicked: PropTypes.func
 }
 
 export default Keg;
