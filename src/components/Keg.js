@@ -1,17 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Card from 'react-bootstrap/Card';
 
 function Keg(props) {
+
   return(
     <React.Fragment>
-      <h3>This is a Keg and it will take the props:</h3>
-      <hr/>
-      <p>{props.name}</p>
-      <p>{props.brand}</p>
-      <p>{props.price}</p>
-      <p>{props.alcCon}</p>
-      <p>{props.flavor}</p>
-      <p>{props.quantity}</p>
+      <Card style={{ width: '18rem' }}>
+        <Card.Body>
+          <Card.Title>{props.name}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">{props.brand} | {props.flavor}</Card.Subtitle>
+          <ListGroup variant="flush">
+            <ListGroup.Item>ABV% {props.alcCon}</ListGroup.Item>
+            <ListGroup.Item>${props.price} <em>per pint</em></ListGroup.Item>
+            <ListGroup.Item>{props.quantity} Serving Remaining</ListGroup.Item>
+          </ListGroup>
+          <Card.Link href="#">View Product Details</Card.Link><br></br>
+          <Card.Link href="#">Visit Brewery Website</Card.Link>
+        </Card.Body>
+      </Card>
     </React.Fragment>
   );
 }
