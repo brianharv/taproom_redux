@@ -1,8 +1,14 @@
 import React from 'react';
-import { Navbar, Form, FormControl, Nav} from "react-bootstrap";
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Nav from 'react-bootstrap/Nav';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Button from 'react-bootstrap/Button';
 
 
-function Navbar() {
+
+function NavBar() {
   return(
     <React.Fragment>
       <Navbar bg="light" expand="lg">
@@ -27,7 +33,7 @@ function Navbar() {
         </Navbar.Collapse>
       </Navbar>
     </React.Fragment>
-  )
+  );
 }
 
-export default Navbar;
+export default NavBar;

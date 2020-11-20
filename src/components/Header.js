@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import NavBar from "./NavBar";
 
 function Header() {
   return(
     <React.Fragment>
-      <Navbar/>
+      <NavBar/>
     </React.Fragment>
   );
 }

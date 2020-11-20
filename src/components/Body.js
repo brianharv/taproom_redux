@@ -1,10 +1,10 @@
 import React from 'react';
-import KegControl from "./KegControl";
+import Splash from './Splash';
 
 function Body() {
   return(
     <React.Fragment>
-      <Body/>
+      <Splash/>
     </React.Fragment>
   );
 }
