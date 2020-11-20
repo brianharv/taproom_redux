@@ -7,8 +7,10 @@ import Body from "./Body";
 function App() {
   return(
     <React.Fragment>
-      <Header/>
-      <Body/>
+      <div className="container-fluid">
+        <Header/>
+        <Body/>
+      </div>
     </React.Fragment>
   );
 }

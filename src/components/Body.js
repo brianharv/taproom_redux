@@ -4,7 +4,11 @@ import Splash from './Splash';
 function Body() {
   return(
     <React.Fragment>
-      <Splash/>
+      <div className="row">
+        <div className="col">
+          <Splash/>
+        </div>
+      </div>    
     </React.Fragment>
   );
 }
