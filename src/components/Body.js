@@ -1,6 +1,6 @@
 import React from 'react';
 import Splash from './Splash';
-import KegList from './KegList';
+import KegControl from './KegControl';
 
 function Body() {
   return(
@@ -8,7 +8,7 @@ function Body() {
       <div className="row">
         <div className="col">
           <Splash/>
-          <KegList/>
+          <KegControl/>
         </div>
       </div>    
     </React.Fragment>
