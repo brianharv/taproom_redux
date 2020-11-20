@@ -9,6 +9,7 @@ function Keg() {
       <p>price</p>
       <p>alcCon</p>
       <p>flavor</p>
+      <p>quantity</p>
     </React.Fragment>
   );
 }

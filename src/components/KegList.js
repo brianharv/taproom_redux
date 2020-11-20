@@ -7,28 +7,32 @@ const masterKegList = [
     brand: 'Rogue',
     price: 6,
     alcCon: 6.5,
-    flavor: 'IPA'
+    flavor: 'IPA',
+    quantity: 124
   },
   {
     name: 'Super Juicy',
     brand: 'Cascade Brewing',
     price: 6.50,
     alcCon: 5.5,
-    flavor: 'Hazy IPA'
+    flavor: 'Hazy IPA',
+    quantity: 124
   },
   {
     name: 'Hurly\'s Burly',
     brand: 'Cascade Brewing',
     price: 7,
     alcCon: 5,
-    flavor: 'Stout'
+    flavor: 'Stout',
+    quantity: 124
   },
   {
     name: 'Old Speckled Hen',
     brand: 'Rare Import',
     price: 5,
     alcCon: 4.5,
-    flavor: 'Cream Ale'
+    flavor: 'Cream Ale',
+    quantity: 124
   }
 ]
 
