@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.container-fluid {
+  background-image: url("./images/taproom_wallpaper.jpg");
+  /* position: fixed; */
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center; 
+}
