@@ -42,7 +42,16 @@ function KegList(){
       <h3>This is the Keg list</h3>
       <p>This is where all the kegs with their properties will show.</p>
       <hr/>
-      <Keg/>
+      {masterKegList.map((keg, index) =>
+        <Keg name={keg.name}
+          brand={keg.brand}
+          alcCon={keg.alcCon}
+          price={keg.price}
+          quantity={keg.quantity}
+          flavor={keg.flavor}
+          key={index}
+          />
+        )}
     </React.Fragment>
   );
 }
