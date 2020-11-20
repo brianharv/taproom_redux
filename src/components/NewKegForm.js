@@ -12,36 +12,43 @@ function NewKegForm(props) {
 
   return(
     <React.Fragment>
-      <form onSubmit={handleNewKegFormSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Beer Name' />
-        <input
-          type='text'
-          name='flavor'
-          placeholder='type' />
-        <input
-          type='text'
-          name='brand'
-          placeholder='Brewery' />
-        <input
-          type='number'
-          step='0.1'
-          name='alcCon'
-          placeholder='ABV' />
-        <input
-          type='number'
-          name='price'
-          step='0.1'
-          placeholder='price per pint' />
-        <input
-          type='number'
-          name='quantity'
-          placeholder='remaining servings (pints)' />
-    
-        <button className="btn btn-primary" type='submit'>Add Keg</button>
+      <form className="form-group" onSubmit={handleNewKegFormSubmission}>
+          <input
+            type='text'
+            name='name'
+            placeholder='Beer Name'
+            className="form-control"/>
+          <input
+            type='text'
+            name='flavor'
+            placeholder='type'
+            className="form-control"/>
+          <input
+            type='text'
+            name='brand'
+            placeholder='Brewery'
+            className="form-control"/>
+          <input
+            type='number'
+            step='0.1'
+            name='alcCon'
+            placeholder='ABV'
+            className="form-control"/>
+          <input
+            type='number'
+            name='price'
+            step='0.1'
+            placeholder='price per pint'
+            className="form-control"/>
+          <input
+            type='number'
+            name='quantity'
+            placeholder='remaining servings (pints)' 
+            className="form-control"/>
+            <br/>
+          <button className="btn btn-primary" type='submit'>Add Keg</button>
       </form>
+      <br/>
     </React.Fragment>
   );
   
