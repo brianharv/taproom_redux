@@ -5,9 +5,8 @@ import PropTypes from 'prop-types';
 function KegList(props){
   return (
     <React.Fragment>
-      <h3>This is the Keg list</h3>
-      <p>This is where all the kegs with their properties will show.</p>
-      <hr/>
+      <h3>The Tap List</h3>
+      
       {props.kegList.map((keg) =>
         <Keg name={keg.name}
           brand={keg.brand}
@@ -19,6 +18,8 @@ function KegList(props){
           id={keg.id}
           />
         )}
+      <br></br>
+      <p><em>Includes seasonal beverages, some items may not be available. Updated weekly.</em></p>  
     </React.Fragment>
   );
 }
