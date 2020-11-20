@@ -3,12 +3,13 @@ import KegList from './KegList';
 import NewKegForm from './NewKegForm';
 
 
+
 class KegControl extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
     }
   }
 
@@ -21,9 +22,10 @@ class KegControl extends React.Component {
   render() {
     let currentState = null;
     let buttonText = null;
+    let backButton = null;
 
-    if (this.state.formVisibleOnPage) {
-      currentState = <NewKegForm/>
+    if (this.state.formVisibleOnPage) {   
+      currentState = <NewKegForm />
       buttonText = "Return to Keg List";
     } else {
       currentState = <KegList/>
