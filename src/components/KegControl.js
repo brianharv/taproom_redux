@@ -47,11 +47,15 @@ class KegControl extends React.Component {
 
   handleSellingAPint = (id) => {
     const newQuantity = this.state.masterKegList.filter(keg => keg.id === id)[0];
-    newQuantity.quantity -= 1;
-    const masterKegWithUpdatedQuantity = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(newQuantity); 
-    this.setState({
+    if(newQuantity.quantity > 0) {
+      newQuantity.quantity -= 1;
+      const masterKegWithUpdatedQuantity = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(newQuantity); 
+        this.setState({
       masterKegList: masterKegWithUpdatedQuantity,
     });
+    } else {
+      alert("out of stock");
+    }
   }
 
 
