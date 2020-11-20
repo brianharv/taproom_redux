@@ -10,6 +10,7 @@ class KegControl extends React.Component {
     super(props)
     this.state = {
       formVisibleOnPage: false,
+      masterKegList: []
     }
   }
 
@@ -19,16 +20,22 @@ class KegControl extends React.Component {
     }));
   }
 
+  handleAddingNewKegToList = (newKeg) => {
+    const newMasterKegList = this.state.masterKegList.concat(newKeg);
+    this.setState = ({
+      masterKegList: newMasterKegList
+    });
+  }
+
   render() {
     let currentState = null;
     let buttonText = null;
-    let backButton = null;
 
     if (this.state.formVisibleOnPage) {   
       currentState = <NewKegForm />
       buttonText = "Return to Keg List";
     } else {
-      currentState = <KegList/>
+      currentState = <KegList kegList={this.state.masterKegList} /> // kegList is a prop we need to pass down from KegControl to KegList and from KegList to Keg
       buttonText = "Add Keg"
     }
     return(
