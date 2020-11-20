@@ -33,7 +33,8 @@ class KegControl extends React.Component {
     const newMasterKegList = this.state.masterKegList.concat(newKeg);
     this.setState({
       masterKegList: newMasterKegList,
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      selectedKeg: null
     });
   }
 
@@ -44,6 +45,15 @@ class KegControl extends React.Component {
     })
   }
 
+  handleSellingAPint = (id) => {
+    const newQuantity = this.state.masterKegList.filter(keg => keg.id === id)[0];
+    newQuantity.quantity -= 1;
+    const masterKegWithUpdatedQuantity = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(newQuantity); 
+    this.setState({
+      masterKegList: masterKegWithUpdatedQuantity,
+    });
+  }
+
 
   render() {
 
@@ -51,14 +61,14 @@ class KegControl extends React.Component {
     let buttonText = null;
 
     if (this.state.selectedKeg != null) {
-      currentState = <KegDetails keg={this.state.selectedKeg}/>
+      currentState = <KegDetails keg={this.state.selectedKeg} onSellingAPint={this.handleSellingAPint}/>
       buttonText = "Return to Keg List";
     }
     else if (this.state.formVisibleOnPage) {   
       currentState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList}/>
       buttonText = "Return to Keg List";
     } else {
-      currentState = <KegList kegList={this.state.masterKegList} onSelectedKeg={this.handleSelectedKeg} /> // kegList is a prop we need to pass down from KegControl to KegList and from KegList to Keg
+      currentState = <KegList kegList={this.state.masterKegList} onSelectedKeg={this.handleSelectedKeg}/> 
       buttonText = "Add Keg"
     }
     return(
