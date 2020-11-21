@@ -11,6 +11,7 @@ import Button from 'react-bootstrap/Button';
 function NavBar() {
   return(
     <React.Fragment>
+      {/* <div className="nav"> */}
         <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#home">the Tap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -33,6 +34,7 @@ function NavBar() {
             </Form>
           </Navbar.Collapse>
         </Navbar>
+      {/* </div> */}
     </React.Fragment>
   );
 }

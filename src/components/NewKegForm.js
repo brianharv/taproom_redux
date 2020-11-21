@@ -3,6 +3,17 @@ import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
 
 function NewKegForm(props) {
+
+  const formStyling = {
+    backgroundColor: '#F7F7F7',
+    border: 'solid 1pt grey',
+    textAlign: "center",
+    borderRadius: "8px",
+    marginBottom: "10px",
+    width: "50%",
+    padding: "5px"
+  }
+
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
     props.onNewKegCreation({name: event.target.name.value, brand: event.target.brand.value, 
@@ -12,42 +23,57 @@ function NewKegForm(props) {
 
   return(
     <React.Fragment>
-      <form className="form-group" onSubmit={handleNewKegFormSubmission}>
-          <input
-            type='text'
-            name='name'
-            placeholder='Beer Name'
-            className="form-control"/>
-          <input
-            type='text'
-            name='flavor'
-            placeholder='type'
-            className="form-control"/>
-          <input
-            type='text'
-            name='brand'
-            placeholder='Brewery'
-            className="form-control"/>
-          <input
-            type='number'
-            step='0.1'
-            name='alcCon'
-            placeholder='ABV'
-            className="form-control"/>
-          <input
-            type='number'
-            name='price'
-            step='0.1'
-            placeholder='price per pint'
-            className="form-control"/>
-          <input
-            type='number'
-            name='quantity'
-            placeholder='remaining servings (pints)' 
-            className="form-control"/>
-            <br/>
-          <button className="btn btn-primary" type='submit'>Add Keg</button>
-      </form>
+      <div style={formStyling}>
+      <h3>Add A New Product </h3>
+        <form className="form-group" onSubmit={handleNewKegFormSubmission}>
+          <div class="form-group">
+            <input
+              type='text'
+              name='name'
+              placeholder='Beer Name'
+              className="form-control"/>
+          </div>   
+          <div class="form-group">
+            <input
+              type='text'
+              name='flavor'
+              placeholder='type'
+              className="form-control"/>
+          </div>    
+          <div class="form-group">
+            <input
+              type='text'
+              name='brand'
+              placeholder='Brewery'
+              className="form-control"/>
+          </div>
+          <div class="form-group">
+            <input
+              type='number'
+              step='0.1'
+              name='alcCon'
+              placeholder='ABV'
+              className="form-control"/>
+          </div>  
+          <div class="form-group">      
+            <input
+              type='number'
+              name='price'
+              step='0.1'
+              placeholder='price per pint'
+              className="form-control"/>
+          </div> 
+          <div class="form-group">   
+            <input
+              type='number'
+              name='quantity'
+              placeholder='remaining servings (pints)' 
+              className="form-control"/>
+          </div>   
+              <br/>
+            <button className="btn btn-primary" type='submit'>Add</button>
+        </form>
+        </div>  
       <br/>
     </React.Fragment>
   );
