@@ -6,8 +6,8 @@ function KegDetails(props) {
   const { keg, onSellingAPint } = props;
 
   const detailsStyling = {
-    backgroundColor: '#F7F7F7',
     border: 'solid 1pt grey',
+    marginTop: '100px',
     textAlign: "center",
     color: 'black',
     borderRadius: "8px",
@@ -23,6 +23,7 @@ function KegDetails(props) {
         <h3> Type: {keg.flavor} Price: ${keg.price} ABV% {keg.alcCon} </h3>
         <h3> Servings left: {keg.quantity}</h3>
       </div>
+      <br></br>
       <button className="btn btn-secondary" onClick={() => onSellingAPint(keg.id)}>Sell Pint</button>
     </React.Fragment>
   );
