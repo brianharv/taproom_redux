@@ -34,7 +34,7 @@ npm run start
 
 ### Component Diagram
 
-![Component Diagram](public/taproom_diagram.jpg)
+![Component Diagram](public/tapRoom_diagram.jpg)
 
 ## Known Bugs
 
