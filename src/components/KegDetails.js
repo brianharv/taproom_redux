@@ -1,13 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { propTypes } from 'react-bootstrap/esm/Image';
+
 
 function KegDetails(props) {
   const { keg, onSellingAPint } = props;
+
+  const detailsStyling = {
+    backgroundColor: '#F7F7F7',
+    border: 'solid 1pt grey',
+    textAlign: "center",
+    color: 'black',
+    borderRadius: "8px",
+    marginBottom: "10px",
+    width: "50%",
+    padding: "5px"
+  }
+
   return(
     <React.Fragment>
-      <h3>This is the details view</h3>
-      <p>{keg.name} {keg.brand} {keg.flavor} {keg.price} {keg.alcCon} {keg.quantity} {keg.id}</p>
+      <div style={detailsStyling}>
+        <h2> {keg.name} - {keg.brand} Details</h2>
+        <h3> Type: {keg.flavor} Price: ${keg.price} ABV% {keg.alcCon} </h3>
+        <h3> Servings left: {keg.quantity}</h3>
+      </div>
       <button className="btn btn-secondary" onClick={() => onSellingAPint(keg.id)}>Sell Pint</button>
     </React.Fragment>
   );

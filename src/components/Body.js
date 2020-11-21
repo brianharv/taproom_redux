@@ -9,7 +9,7 @@ function Body() {
         <div className="col">
           <Splash/>
           <KegControl/>
-        </div>
+        </div>    
       </div>    
     </React.Fragment>
   );

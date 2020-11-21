@@ -40,7 +40,7 @@
 
   .container-fluid {
   background-image: url("./images/taproom_wallpaper.jpg");
-  position: fixed;
+  position: absolute;
   min-width: 100%; 
   min-height: 100%;
   background-size: cover;
@@ -49,4 +49,29 @@
 
 .tap {
   font-family: 'IBM Plex Sans', sans-serif;
+  opacity: 85%;
+}
+.splash {
+  border: solid 2pt grey;
+}
+
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+  color: white;
+}
+
+h3, h2, p {
+  font-family: 'IBM Plex Serif', serif;
+  color: white;
+}
+
+.tapList {
+  border: solid 3pt grey;
+  padding: 10px;
+  margin: 10px;
+  width: 320px;
+}
+
+.details {
+  color: black;
 }
