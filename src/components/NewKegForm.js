@@ -49,7 +49,7 @@ function NewKegForm(props) {
           </div>
           <div className="form-group">
             <input
-              type='text'
+              type='number'
               step='0.1'
               name='alcCon'
               placeholder='ABV'
@@ -57,7 +57,7 @@ function NewKegForm(props) {
           </div>  
           <div className="form-group">      
             <input
-              type='text'
+              type='number'
               name='price'
               step='0.1'
               placeholder='price per pint'
@@ -65,7 +65,7 @@ function NewKegForm(props) {
           </div> 
           <div className="form-group">   
             <input
-              type='text'
+              type='number'
               name='quantity'
               placeholder='remaining servings (pints)' 
               className="form-control"/>
