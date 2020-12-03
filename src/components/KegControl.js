@@ -49,6 +49,7 @@ class KegControl extends React.Component {
     const newQuantity = this.state.masterKegList.filter(keg => keg.id === id)[0];
     if(newQuantity.quantity > 0) {
       newQuantity.quantity -= 1;
+      newQuantity.quantity = newQuantity.quantity.toString();
       const masterKegWithUpdatedQuantity = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(newQuantity); 
         this.setState({
       masterKegList: masterKegWithUpdatedQuantity,
