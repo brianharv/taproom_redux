@@ -33,4 +33,21 @@ describe('selectedKegReducer', () => {
 
     })
   })
+
+  test('Should return null if action type is NULL_KEG', () => {
+    const action = {
+      type: c.NULL_KEG
+    }
+
+    const initialState = {
+      name: 'The Beast', 
+      brand: 'Doghaus',
+      flavor: 'IPA',
+      price: 7,
+      quantity: 120,
+      alcCon: 7.5,
+      id: 1
+    }
+    expect(selectedKegReducer(initialState, action)).toEqual(null);
+  })
 })

@@ -24,7 +24,7 @@ function KegDetails(props) {
         <h3> Servings left: {keg.quantity}</h3>
       </div>
       <br></br>
-      <button className="btn btn-secondary" onClick={() => onSellingAPint(keg.id)}>Sell Pint</button>
+      <button className="btn btn-secondary" onClick={() => onSellingAPint(keg)}>Sell Pint</button>
     </React.Fragment>
   );
 }

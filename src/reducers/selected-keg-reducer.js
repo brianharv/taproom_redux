@@ -4,7 +4,6 @@ export default (state = null, action) => {
   const { name, brand, flavor, alcCon, quantity, price, id } = action;
   switch(action.type) {
     case c.SELECT_KEG:
-      if (state === null) {
         return {
           name: name,
           brand: brand,
@@ -14,10 +13,9 @@ export default (state = null, action) => {
           price: price,
           id: id
         }
-      }else {
-        return state;
-      }
-      default:
+    case c.NULL_KEG:
+      return null;
+    default:
         return state;
   }
 }

@@ -37,3 +37,7 @@ export const selectKeg = id => ({
   type: c.SELECT_KEG,
   id
 })
+
+export const nullKeg = () => ({
+  type: c.NULL_KEG
+})
