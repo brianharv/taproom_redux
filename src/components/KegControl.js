@@ -4,7 +4,6 @@ import NewKegForm from './NewKegForm';
 import KegDetails from './KegDetails';
 import { connect } from 'react-redux';
 import * as a from '../actions'
-import * as c from '../actions/ActionTypes';
 import PropTypes from 'prop-types';
 
 
@@ -21,13 +20,12 @@ class KegControl extends React.Component {
   handleClick = () => {
     if (this.state.selectedKeg != null) {
       this.setState({
-        formVisibleOnPage: false,
         selectedKeg: null
       });
     } else {    
-      this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage,
-      }));
+      const { dispatch } = this.props;
+      const action = a.toggleForm();
+      dispatch(action);
     }
   }  
 
@@ -40,14 +38,15 @@ class KegControl extends React.Component {
   }
 
   handleSelectedKeg = (id) => {
-    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
-    console.log(selectedKeg);
+    const selectedKeg = this.props.masterKegList.filter(keg => keg.id === id)[0];
     this.setState({
       selectedKeg: selectedKeg,
     })
   }
 
   handleSellingAPint = (id) => {
+    const { dispatch } = this.props;
+    
     const newQuantity = this.state.masterKegList.filter(keg => keg.id === id)[0];
     if(newQuantity.quantity > 0) {
       newQuantity.quantity -= 1;

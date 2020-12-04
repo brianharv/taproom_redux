@@ -14,6 +14,21 @@ export const addKeg = (keg) => {
   }
 }
 
+export const sellPint = (pintForSale) => {
+  const { name, brand, flavor, quantity, price, alcCon, id } = pintForSale;
+  return {
+    type: c.SELL_PINT,
+      name: name, 
+      brand: brand, 
+      flavor: flavor, 
+      quantity: quantity, 
+      price: price, 
+      alcCon: alcCon, 
+      id: id
+  }
+
+}
+
 export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 })
