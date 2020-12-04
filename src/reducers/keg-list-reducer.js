@@ -16,19 +16,21 @@ export default (state = {}, action) => {
 
 
    case 'SELL_PINT':
-    return Object.assign({}, state, {
-      [id]: {
-        name: name,
-        brand: brand,
-        flavor: flavor,
-        alcCon: alcCon,
-        quantity: quantity - 1,
-        price: price,
-        id: id
-      }
-    });  
-
-
+     if (action.quantity > 0) {
+      return Object.assign({}, state, {
+        [id]: {
+          name: name,
+          brand: brand,
+          flavor: flavor,
+          alcCon: alcCon,
+          quantity: quantity - 1,
+          price: price,
+          id: id
+        }
+      });  
+     } else {
+       return state;
+     }
    default:
      return state;  
  }
