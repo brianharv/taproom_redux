@@ -1,4 +1,5 @@
 import selectedKegReducer from '../../reducers/selected-keg-reducer';
+import * as c from '../../actions/ActionTypes';
 
 describe('selectedKegReducer', () => {
 
@@ -10,7 +11,7 @@ describe('selectedKegReducer', () => {
   test('Should return a keg when keg is selected', () => {
 
     const action = {
-      type: 'SELECT_KEG',
+      type: c.SELECT_KEG,
       name: 'The Beast', 
       brand: 'Doghaus',
       flavor: 'IPA',

@@ -1,7 +1,9 @@
+import * as c from './../actions/ActionTypes';
+
 export default (state = null, action) => {
   const { name, brand, flavor, alcCon, quantity, price, id } = action;
   switch(action.type) {
-    case 'SELECT_KEG':
+    case c.SELECT_KEG:
       if (state === null) {
         return {
           name: name,

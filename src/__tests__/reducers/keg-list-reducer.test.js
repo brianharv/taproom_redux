@@ -1,4 +1,5 @@
 import kegListReducer from '../../reducers/keg-list-reducer';
+import * as c from '../../actions/ActionTypes';
 
 describe('kegListReducer', () => {
 
@@ -43,7 +44,7 @@ describe('kegListReducer', () => {
     const { name, brand, flavor, quantity, price, alcCon, id } = kegProps;
 
     action = {
-      type: 'ADD_KEG',
+      type: c.ADD_KEG,
       name: name,
       brand: brand,
       flavor: flavor,
@@ -71,7 +72,7 @@ describe('kegListReducer', () => {
     const { name, brand, flavor, quantity, price, alcCon, id } = kegProps;
 
     action = {
-      type: 'SELL_PINT',
+      type: c.SELL_PINT,
       name: name,
       brand: brand,
       flavor: flavor,
