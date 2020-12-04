@@ -33,10 +33,18 @@ export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 })
 
-export const selectKeg = id => ({
+export const selectKeg = (keg) => {
+  const { name, brand, flavor, quantity, price, alcCon, id } = keg;
+  return {
   type: c.SELECT_KEG,
-  id
-})
+  name: name,
+  brand: brand,
+  flavor: flavor,
+  quantity: quantity,
+  price: price,
+  id: id  
+  };
+}
 
 export const nullKeg = () => ({
   type: c.NULL_KEG
