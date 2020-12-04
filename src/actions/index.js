@@ -14,8 +14,8 @@ export const addKeg = (keg) => {
   }
 }
 
-export const sellPint = (pintForSale) => {
-  const { name, brand, flavor, quantity, price, alcCon, id } = pintForSale;
+export const sellPint = (pint) => {
+  const { name, brand, flavor, quantity, price, alcCon, id } = pint;
   return {
     type: c.SELL_PINT,
       name: name, 
@@ -42,6 +42,7 @@ export const selectKeg = (keg) => {
   flavor: flavor,
   quantity: quantity,
   price: price,
+  alcCon: alcCon,
   id: id  
   };
 }

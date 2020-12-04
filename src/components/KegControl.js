@@ -15,7 +15,7 @@ class KegControl extends React.Component {
   }
 
   handleClick = () => {
-    const { dispatch} = this.props;
+    const { dispatch } = this.props;
     if (this.props.selectedKeg !== null) {
       const action = a.nullKeg();
       dispatch(action)
@@ -34,8 +34,9 @@ class KegControl extends React.Component {
   }
 
   handleSelectedKeg = (keg) => {
-    const { dispatch } = this.props;
-    const action = a.selectKeg(keg)
+    // const selectedKeg = this.props.masterKegList[keg.id];
+    const { dispatch } = this.props
+    const action = a.selectKeg(keg);
     dispatch(action);
   }
 
@@ -52,6 +53,7 @@ class KegControl extends React.Component {
     let buttonText = null;
 
     if (this.props.selectedKeg != null) {
+      console.log(this.props.selectedKeg);
       currentState = <KegDetails keg={this.props.selectedKeg} onSellingAPint={this.handleSellingAPint}/>
       buttonText = "Return to Keg List";
     }
