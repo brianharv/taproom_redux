@@ -7,6 +7,7 @@ function KegDetails(props) {
 
   const detailsStyling = {
     border: 'solid 1pt grey',
+    background: 'black',
     marginTop: '100px',
     textAlign: "center",
     color: 'black',

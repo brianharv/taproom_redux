@@ -76,7 +76,7 @@ function NewKegForm(props) {
               className="form-control"/>
           </div>   
               <br/>
-            <button className="btn btn-primary" type='submit'>Add</button>
+            <button className="btn btn-secondary" type='submit'>Add</button>
         </form>
         </div>  
       <br/>

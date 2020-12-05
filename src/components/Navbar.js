@@ -12,7 +12,7 @@ function NavBar() {
   return(
     <React.Fragment>
       {/* <div className="nav"> */}
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar className="nav" bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#home">the Tap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

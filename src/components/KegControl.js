@@ -70,7 +70,7 @@ class KegControl extends React.Component {
     return(
         <React.Fragment>
             {currentState}
-            <button className="btn btn-primary" onClick={this.handleClick}>{buttonText}</button>
+            <button className="btn btn-secondary" onClick={this.handleClick}>{buttonText}</button>
         </React.Fragment>
     );
   };

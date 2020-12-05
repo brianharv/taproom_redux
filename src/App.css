@@ -40,6 +40,7 @@
 
   .container-fluid {
   background-image: url("./images/taproom_wallpaper.jpg");
+  z-index: 0;
   position: absolute;
   min-width: 100%; 
   min-height: 100%;
@@ -53,6 +54,8 @@
 }
 .splash {
   border: solid 2pt grey;
+  background-color: black;
+  opacity: 90%;
 }
 
 h1 {
