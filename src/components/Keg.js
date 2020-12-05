@@ -27,6 +27,15 @@ function Keg(props) {
             id: props.id
 
           })}>View Product Details</Card.Link><br></br>
+          <Card.Link href="#" onClick={() => props.whenPintSold({
+            name: props.name,
+            brand: props.brand,
+            flavor: props.flavor,
+            price: props.price,
+            alcCon: props.alcCon,
+            quantity: props.quantity,
+            id: props.id
+          })}> Sell a Pint</Card.Link><br></br>
           <Card.Link href="#">Visit Brewery Website</Card.Link>
         </Card.Body>
       </Card>
@@ -42,7 +51,8 @@ Keg.propTypes = {
   flavor: PropTypes.string,
   quantity: PropTypes.number,
   id: PropTypes.string,
-  whenKegClicked: PropTypes.func
+  whenKegClicked: PropTypes.func,
+  whenPintSold: PropTypes.func
 }
 
 export default Keg;

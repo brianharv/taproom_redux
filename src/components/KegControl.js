@@ -57,14 +57,14 @@ class KegControl extends React.Component {
 
     if (this.props.selectedKeg != null) {
       console.log(this.props.selectedKeg);
-      currentState = <KegDetails keg={this.props.selectedKeg} onSellingAPint={this.handleSellingAPint}/>
+      currentState = <KegDetails keg={this.props.selectedKeg} />
       buttonText = "Return to Keg List";
     }
     else if (this.props.formVisibleOnPage) {   
       currentState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList}/>
       buttonText = "Return to Keg List";
     } else {
-      currentState = <KegList kegList={this.props.masterKegList} onSelectedKeg={this.handleSelectedKeg}/> 
+      currentState = <KegList kegList={this.props.masterKegList} onSelectedKeg={this.handleSelectedKeg} onSellingAPint={this.handleSellingAPint}/> 
       buttonText = "Add Keg"
     }
     return(
