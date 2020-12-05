@@ -1,6 +1,6 @@
-# _Taproom_
+# _Taproom Redux_
 
-#### _A React inventory management app, 11/20/2020_
+#### _A React inventory management app now with Redux, 11/20/2020_
 
 #### By _**Brian Harvey**_
 
@@ -14,8 +14,8 @@ _This app allows users to add inventory (in this case, kegs of beer) and track t
 2. To download the project Directory to your desktop enter the following commands:
 ```
 cd Desktop
-git clone https://github.com/brianharv/taproom
-cd taproom
+git clone https://github.com/brianharv/taproom_redux
+cd taproom_redux
 ```
 3. To view the downloaded files, open them in a text editor or IDE of your choice.
 * if you have VSCode for example, when your terminal is within the main project Directory you can open all of the files with the command:
@@ -49,6 +49,7 @@ _For any questions or feedback, feel free to [contact me](mailto:brian.harv3y@gm
 * JavaScript
 * React
 * JSX
+* Redux
 * HTML
 * CSS
 * Git and GitHub
