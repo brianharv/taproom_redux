@@ -34,16 +34,19 @@ class KegControl extends React.Component {
   }
 
   handleSelectedKeg = (keg) => {
-    // const selectedKeg = this.props.masterKegList[keg.id];
     const { dispatch } = this.props
     const action = a.selectKeg(keg);
     dispatch(action);
   }
 
   handleSellingAPint = (pint) => {
-    const { dispatch } = this.props;
-    const action = a.sellPint(pint)
-    dispatch(action);
+    if (pint.quantity > 0) {
+      const { dispatch } = this.props;
+      const action = a.sellPint(pint)
+      dispatch(action);
+    } else {
+      alert('out of stock');
+    }
   }
 
 

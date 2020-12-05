@@ -12,7 +12,7 @@ function Keg(props) {
           <Card.Title>{props.name}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{props.brand} | {props.flavor}</Card.Subtitle>
           <ListGroup variant="flush">
-            <ListGroup.Item>ABV% {props.alcCon}</ListGroup.Item>
+            <ListGroup.Item>ABV {props.alcCon}%</ListGroup.Item>
             <ListGroup.Item>${props.price} <em>per pint</em></ListGroup.Item>
             <ListGroup.Item>{props.quantity} Serving Remaining</ListGroup.Item>
           </ListGroup>

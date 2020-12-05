@@ -17,7 +17,7 @@ export default (state = {}, action) => {
       });
 
 
-    case 'SELL_PINT':
+    case c.SELL_PINT:
       if (action.quantity > 0) {
         return Object.assign({}, state, {
         [id]: {
